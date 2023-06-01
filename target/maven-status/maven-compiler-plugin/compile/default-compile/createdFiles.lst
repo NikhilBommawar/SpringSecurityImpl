@@ -1,0 +1,6 @@
+com\unoveo\DataSourceConfiguration.class
+com\unoveo\ApplicationConfiguration.class
+com\unoveo\MvcWebApplicationInitializer.class
+com\unoveo\WebMvcConfiguration.class
+com\unoveo\IndexController.class
+com\unoveo\SecurityWebApplicationInitializer.class
