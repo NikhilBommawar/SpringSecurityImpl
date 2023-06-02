@@ -1,6 +1,13 @@
+com\unoveo\Calc\CORSFilter.class
+com\unoveo\Calc\InputModel.class
+com\unoveo\SecurityConfiguration.class
+com\unoveo\WebMvcConfiguration.class
+com\unoveo\SecurityWebApplicationInitializer.class
 com\unoveo\DataSourceConfiguration.class
+com\unoveo\Calc\Calc$1.class
+com\unoveo\Calc\Calc.class
+com\unoveo\SecurityConfiguration$1.class
 com\unoveo\ApplicationConfiguration.class
 com\unoveo\MvcWebApplicationInitializer.class
-com\unoveo\WebMvcConfiguration.class
+com\unoveo\Calc\DemoCalc.class
 com\unoveo\IndexController.class
-com\unoveo\SecurityWebApplicationInitializer.class

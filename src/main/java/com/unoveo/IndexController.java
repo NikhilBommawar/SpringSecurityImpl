@@ -1,6 +1,8 @@
 package com.unoveo;
 
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.core.Authentication;
 
 import org.springframework.stereotype.Controller;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -27,7 +30,7 @@ public class IndexController {
         return "index";
     }
 
-    @RequestMapping("/calc")
+    @RequestMapping("/demo")
     public String calculate(Authentication authenticate) throws IOException, InterruptedException {
 
                             //        HttpClient httpClient =  HttpClient.newHttpClient();
@@ -38,12 +41,21 @@ public class IndexController {
                             //       HttpResponse response =  httpClient.send(request, HttpResponse.BodyHandlers.discarding());
 
 
-      return "calculate";
+      return "demoSecurity";
     }
 
     @RequestMapping("/accessDenied")
     public String acessDeniedHandler() {
         return "accessDenied";
+    }
+
+
+    @RequestMapping("/afterLogin")
+    public void redirectToAngular(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        PrintWriter pw = response.getWriter();
+        response.sendRedirect("http://localhost:8080/angular/");
+        pw.close();
     }
 
 }
